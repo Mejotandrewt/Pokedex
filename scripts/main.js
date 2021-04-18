@@ -13,7 +13,7 @@ function getPokemonList() {
   /* TODO 1 */
 fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
 .then( response => response.json())
-.then(data => attachPoleList(data.results))
+.then(data => attachPokeList(data.results))
 }
 
 /*
@@ -23,6 +23,9 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
   It should accept a URL to fetch
 */
 function getPokemon(url) {
+  fetch(url)
+.then( response => response.json())
+.then(data => attachPokeView(data))
   /* TODO 2 */
 }
 
