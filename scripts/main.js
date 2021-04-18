@@ -11,6 +11,9 @@ function setup() {
 */
 function getPokemonList() {
   /* TODO 1 */
+fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
+.then( response => response.json())
+.then(data => attachPoleList(data.results))
 }
 
 /*
